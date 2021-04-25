@@ -179,7 +179,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-size: 36px;
-  background-image: linear-gradient(135deg, #FDD819 0%, #E80505 100%)
+  background-image: linear-gradient(36deg, #17522E 0%, #2893A2 90%, #FFCB16 100%)
 }
 
 * {
