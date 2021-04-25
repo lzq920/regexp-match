@@ -116,6 +116,10 @@ const throttle = (fn, wait) => {
 const isRegexp = (value) => {
   return Object.prototype.toString.call(value) === '[object RegExp]';
 }
+const randomHexColorCode = () => {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  return '#' + n.slice(0, 6);
+};
 const matchRegexp = () => {
   matchs.value = [];
   if (!reg.value.length) {
@@ -148,7 +152,8 @@ const matchRegexp = () => {
       })
       matchs.value.push({
         left: item.index + 'ch',
-        width: len + 'ch'
+        width: len + 'ch',
+        borderBottom: `4px solid ${randomHexColorCode()}`
       });
     }
   } catch (e) {
@@ -210,10 +215,10 @@ html, body {
 
 .reg input {
   height: 40px;
-  border: none;
   font-size: 36px;
   background-color: transparent;
   color: #ffffff;
+  border: 1px dashed;
 }
 
 .reg input:focus {
@@ -237,12 +242,12 @@ html, body {
 
 .content .test-input {
   height: 40px;
-  border: none;
   font-size: 36px;
   z-index: 1;
   background-color: transparent;
   color: #ffffff;
   width: 100%;
+  border: 1px dashed;
 }
 
 .content .test-input:focus {
@@ -254,7 +259,6 @@ html, body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(232, 5, 5, 0.5);
   transition: all 300ms;
 }
 
@@ -273,6 +277,10 @@ html, body {
   cursor: pointer;
   color: #ffffff;
   border-radius: 4px;
+}
+
+.tip .tip-item:hover {
+  background-color: #9C27B0;
 }
 
 .tip .tip-item .tip-item-hover {
