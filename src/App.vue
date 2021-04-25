@@ -218,7 +218,7 @@ html, body {
   font-size: 36px;
   background-color: transparent;
   color: #ffffff;
-  border: 1px dashed;
+  border: 1px dashed #cccccc;
 }
 
 .reg input:focus {
@@ -247,7 +247,7 @@ html, body {
   background-color: transparent;
   color: #ffffff;
   width: 100%;
-  border: 1px dashed;
+  border: 1px dashed #cccccc;
 }
 
 .content .test-input:focus {
