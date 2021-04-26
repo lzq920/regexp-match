@@ -1,5 +1,5 @@
 {
-  "name": "regexp-match-playground",
+  "name": "regexp-match",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
